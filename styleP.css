@@ -1,12 +1,17 @@
 *{
     margin:0;
     padding:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #000000;
 }
 
 .main{
     width: 100%;
     color: white;
-    background-color: #000000;
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -128,4 +133,19 @@ u1 li a:hover{
 
 .icons ion-icon:hover{
     color: purple;
+}
+
+.textf{
+    color: white;
+}
+
+
+.inner{
+    padding-top: 20px;
+}
+.header{
+    text-align: center;
+    color: white;
+    padding: 1rem;
+    position: relative;
 }
