@@ -6,7 +6,11 @@
 }
 
 body{
-    background-color: #000000;
+    background: url('sep09.jpg');
+    width: auto;
+    height: auto;
+    max-width: 100%; 
+    max-height: 100%;
 }
 
 .main{
@@ -31,8 +35,11 @@ body{
 .navbar .logo{
     width:100px;
     cursor:pointer;
-    margin-top: -3%;
-    margin-left: -2%;
+    margin-top: -2%;
+    margin-left: -8%;
+}
+.navbar .logo:hover{
+    color: white;
 }
 
 u1{
@@ -64,6 +71,7 @@ u1 li a:hover{
     display: inline-block;
 }
 
+
 .info{
     margin-left: 7%;
     margin-top: 6%;
@@ -77,6 +85,13 @@ u1 li a:hover{
     letter-spacing: 1px;
     line-height: 24px;
 }
+
+.info h2{
+    padding: 20px;
+    color: #6100d7;
+
+}
+
 .info span{
     color: #6100d7;
 }
@@ -108,7 +123,7 @@ u1 li a:hover{
 .image img{
     position: absolute;
     height: 140%;
-    left:40%;
+    left:60%;
     transform: translate(-50%);
     bottom: 0;
     transition: left 2s ease;
@@ -140,12 +155,192 @@ u1 li a:hover{
 }
 
 
+/*My skills*/
+
 .inner{
+    min-height: 75vh;
     padding-top: 20px;
+    background-color: #000;
 }
 .header{
     text-align: center;
-    color: white;
+    color: #ffffff;
     padding: 1rem;
     position: relative;
+}
+
+.header:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 100px;
+    background-color: #6100d7;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem 80px;
+    font-size: 1.2rem;
+}
+
+.skill-box{
+    padding: 1rem;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.skill-box:hover > .skill-title:after,.skill-box:hover > .skill-title:before{
+    width: 35px;
+}
+
+.skill-box:hover .img{
+    transform: translateY(-10px);
+}
+.skill-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    
+}
+
+.skill-icon{
+    width: 50px ;
+}
+
+.skill-title:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    width: 0;
+    height: 4px;
+    border-radius: 2px 0 0 2px;
+    background-color: #6100d7;
+    transition: .5s;
+
+}
+
+.skill-title:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 4px;
+    border-radius: 0 2px 2px 0;
+    background-color: #6100d7;
+    transition: .5s;
+
+}
+
+.img{
+    width: 90px;
+    height: 90px;
+    position: relative;
+    border-radius: 45px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+
+.img:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50px;
+    background: rgba(100,100, 100, 0.3);
+    border-radius: 45px 0 0 45px;
+
+}
+
+/* About me page*/
+
+.section6{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    background-color: #000000;
+}
+
+.container-box{
+    width: 80%;       
+    min-height: 100vh;                              
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+.box-section{
+    width: 100%; /* Make the section fill the container */
+    text-align: center;
+}
+.box-section .title{
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+.box-section .content h1{
+    margin-top: 10px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.box-section .content .button {
+    margin-top: 30px;
+}
+
+.box-section .content .button a{
+    background-color: #6100d7;
+    padding: 12px 40px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+    border-radius: 20px;
+}
+.box-section .content .button a:hover{
+    background-color: #ffffff;
+    color: black;
+    font-weight: bold;
+}
+
+
+.box-section .social{
+    margin-top: 40px;
+}
+.box-section .social h1{
+    color: rgb(255, 255, 255);
+    padding: 20px;
+}
+
+.box-section .social i{
+    color: #ffffff;
+    font-size: 30px;
+    padding: 0px 10px;
+}
+
+.box-section .social i:hover{
+    color: #6100d7;
 }
